@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./Cesium/Cesium.js"></script>
+    <script src="//cdn.tailwindcss.com"></script>
+    <link type="text/css" rel="stylesheet" href="./Cesium/Widgets/widgets.css" />
+
+</head>
+<body>
+<div class="h-screen w-screen" id="id-map-container">
+
+</div>
+<script>
+    new Cesium.Viewer(`id-map-container`, {
+        imageryProvider: new Cesium.UrlTemplateImageryProvider({
+            url: '../output/{z}/{x}/{y}.jpg',
+            minimumLevel: 0,
+            maximumLevel: 5,
+        }),
+          contextOptions: {   //传递给 Scene 的与 options 相对应的上下文和WebGL创建属性
+          webgl: {
+            alpha: false,
+          }
+        },
+    })
+</script>
+</body>
+</html>
