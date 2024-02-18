@@ -47,6 +47,6 @@ python3 main.py
 ```
 
 ## Authentication example 
-Please run under the web proxy server . /example/example.html
+- Please run under the web proxy server . /example/example.html
+- We need to introduce cesium ourselves
 
-Translated with DeepL.com (free version)

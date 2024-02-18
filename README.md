@@ -38,4 +38,5 @@ python3 main.py
 ```
 
 ## 验证示例 
-请在web代理服务器下运行 ./example/example.html
+- 请在web代理服务器下运行 ./example/example.html
+- 需要自己引入cesium
