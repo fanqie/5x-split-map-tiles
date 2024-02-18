@@ -1,3 +1,4 @@
+中文|[English](README_en.md)
 # split_world_tiles
 split_world_tiles可以将世界地图的完整地图分割为，可以支持标准gis引擎地图瓦片服务文件
 ![preview](img.png)

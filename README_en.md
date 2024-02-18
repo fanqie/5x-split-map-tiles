@@ -1,3 +1,4 @@
+[中文](README.md)|English
 # split_world_tiles
 split_world_tiles can split the full world map into, for example, standard gis engine map tile service files.
 ![preview](img.png)
