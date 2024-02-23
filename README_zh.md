@@ -1,6 +1,6 @@
 中文|[English](README_zh)
 # split-map-tiles
-split-map-tiles 可以将世界地图的完整地图分割为，可以支持标准gis引擎地图瓦片服务文件
+5x-split-map-tiles 可以将世界地图的完整地图分割为，可以支持标准gis引擎地图瓦片服务文件
 ![preview](img.png)
 ## 使用方法
 ### 安装依赖
@@ -40,4 +40,4 @@ python3 main.py
 
 ## 验证示例 
 - 请在web代理服务器下运行 ./example/example.html
-- 需要自己引入cesium
+- [在线演示](https://fanqie.github.io/5x-split-map-tiles/example/index.html)

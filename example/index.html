@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script src="./Cesium/Cesium.js"></script>
     <script src="//cdn.tailwindcss.com"></script>
-    <link type="text/css" rel="stylesheet" href="node_modules/@cesium/widgets/widgets.css" />
+    <!--    <link type="text/css" rel="stylesheet" href="node_modules/@cesium/widgets/widgets.css" />-->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.114/Build/Cesium/Cesium.js"></script>
+    <link href="https://cesium.com/downloads/cesiumjs/releases/1.114/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
 
 </head>
 <body>
@@ -13,18 +14,26 @@
 
 </div>
 <script>
-    new Cesium.Viewer(`id-map-container`, {
-        imageryProvider: new Cesium.UrlTemplateImageryProvider({
-            url: '../output/{z}/{x}/{y}.jpg',
-            minimumLevel: 0,
-            maximumLevel: 5,
-        }),
-          contextOptions: {   //传递给 Scene 的与 options 相对应的上下文和WebGL创建属性
-          webgl: {
-            alpha: false,
-          }
+    const viewer = new Cesium.Viewer(`id-map-container`, {
+
+        contextOptions: {   //传递给 Scene 的与 options 相对应的上下文和WebGL创建属性
+            webgl: {
+                alpha: false,
+            }
         },
     })
+    viewer.scene.imageryLayers.removeAll();
+    const layers = viewer.scene.imageryLayers;
+    layers.add(
+        new Cesium.ImageryLayer(
+            new Cesium.UrlTemplateImageryProvider({
+                url: '../output/{z}/{x}/{y}.jpg',
+                minimumLevel: 0,
+                maximumLevel: 5,
+            })
+        )
+    )
+
 </script>
 </body>
 </html>

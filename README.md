@@ -1,6 +1,6 @@
 [中文](README_zh.md)|English
 # split-map-tiles
-split-map-tiles can split the full world map into, for example, standard gis engine map tile service files.
+5x-split-map-tiles can split the full world map into, for example, standard gis engine map tile service files.
 ![preview](img.png)
 ### Usage
 ### Install dependencies
@@ -49,5 +49,5 @@ python3 main.py
 
 ## Authentication example 
 - Please run under the web proxy server . /example/example.html
-- We need to introduce cesium ourselves
+- [online demo](https://fanqie.github.io/5x-split-map-tiles/example/index.html)
 
